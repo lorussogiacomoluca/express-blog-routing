@@ -7,11 +7,13 @@ const router = express.Router()
 //import post array
 const postList = require('../posts')
 
+//INDEX
 router.get('/', (req, res) =>{
     // res.send(`Lista dei post`)
     res.json(postList)
 })
 
+//SHOW
 router.get('/:id', (req,res) =>{
     //res.send(`Dettaglio del post: ${req.params.id}`)
     const id = req.params.id
