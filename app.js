@@ -5,6 +5,12 @@ const app = express()
 //Port
 const port = 3000
 
+//import posts router
+const postsRouters = require('./routers/posts.js')
+
+// Connect the posts router to /posts
+app.use('/posts', postsRouters)
+
 // Shows "Il mio blog" when visiting "/"
 app.get('/', (req,res)=>{
     res.send('Il mio blog')
