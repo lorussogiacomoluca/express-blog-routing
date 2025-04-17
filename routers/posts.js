@@ -13,7 +13,10 @@ router.get('/', (req, res) =>{
 })
 
 router.get('/:id', (req,res) =>{
-    res.send(`Dettaglio del post: ${req.params.id}`)
+    //res.send(`Dettaglio del post: ${req.params.id}`)
+    const id = req.params.id
+    const filtred  = postList.find((post) => post.id == id)
+    res.json(filtred)
 })
 
 //STORE
