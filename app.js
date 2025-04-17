@@ -5,6 +5,9 @@ const app = express()
 //Port
 const port = 3000
 
+//Static asset folder
+app.use(express.static('public'))
+
 //import posts router
 const postsRouters = require('./routers/posts.js')
 
