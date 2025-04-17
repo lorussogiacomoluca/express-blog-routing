@@ -4,8 +4,12 @@ const express = require('express')
 // Create a new router
 const router = express.Router()
 
+//import post array
+const postList = require('../posts')
+
 router.get('/', (req, res) =>{
-    res.send(`Lista dei post`)
+    // res.send(`Lista dei post`)
+    res.json(postList)
 })
 
 router.get('/:id', (req,res) =>{
